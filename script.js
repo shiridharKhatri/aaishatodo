@@ -62,6 +62,7 @@ function deleteTodo(button) {
   // Save todo and history to local storage
   saveTodos();
   saveHistory();
+  // loadHistory()
 }
 
 function completeTodo(button) {
@@ -80,6 +81,7 @@ function completeTodo(button) {
   // Save todo and history to local storage
   saveTodos();
   saveHistory();
+  // loadHistory()
 }
 
 function saveTodos() {
@@ -117,9 +119,10 @@ function saveHistory() {
   const historyList = document.getElementById("historyList");
   const history = [];
   for (const li of historyList.children) {
+    const style = li.style.border;
     const text = li.querySelector("span").innerText;
     const completed = li.classList.contains("completed");
-    history.push({ text, completed });
+    history.push({ text, completed, style });
   }
   localStorage.setItem("history", JSON.stringify(history));
 }
@@ -129,6 +132,7 @@ function loadHistory() {
   const history = JSON.parse(localStorage.getItem("history")) || [];
   for (const todo of history) {
     const li = document.createElement("li");
+    li.style.border = todo.style;
     li.innerHTML = `
             <span>${todo.text}</span>
             <button onclick="deleteHistory(this)"><i class="fa-solid fa-trash"></i></button>
