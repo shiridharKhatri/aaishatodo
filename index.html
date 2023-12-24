@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <script
+      src="https://kit.fontawesome.com/5b67d7fb40.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>ToDo App</title>
+  </head>
+  <body>
+    <nav>
+      <h1 id="menu"><i class="fa-solid fa-bars"></i></h1>
+      <div class="details">
+        <img src="./profile.png" alt="profile" />
+        <div class="det">
+          <h2>Aaisha's Todo</h2>
+          <p>Siddhart's wife</p>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <!-- <h1>ToDo List</h1> -->
+      <form class="todo-container">
+        <input type="text" id="todoInput" placeholder="Add a new ToDo" />
+        <button onclick="addTodo()"><i class="fa-solid fa-plus"></i></button>
+      </form>
+      <h2 id="current"><i class="fa-solid fa-list-check"></i> Current Tasks</h2>
+      <ul id="todoList">
+        <!-- <div class="noTask">
+          <h1>
+            <i class="fa-solid fa-calendar-check"></i>
+          </h1>
+          <p>No task is added</p>
+        </div> -->
+      </ul>
+      <div class="popup" id="popup">
+        <div class="topDiv">
+          <h2><i class="fa-solid fa-clock-rotate-left"></i> History</h2>
+          <span id="close"><i class="fa-solid fa-xmark"></i></span>
+        </div>
+        <ul id="historyList"></ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
