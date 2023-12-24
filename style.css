@@ -22,7 +22,7 @@ body {
   padding: 1rem;
 }
 nav {
-  padding: 1rem 2rem;
+  padding: 1rem 2rem 1rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,7 +61,7 @@ nav h1 {
 .popup {
   width: 100%;
   background: #3e2b7c;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   bottom: 0;
   top: 0;
