@@ -18,7 +18,7 @@ html {
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   height: 100vh;
-  background: #22185d;
+  background: #041455;
   padding: 1rem;
 }
 nav {
@@ -32,7 +32,7 @@ nav img {
   height: 6rem;
   width: 6rem;
   border-radius: 50%;
-  background: #81d5e2;
+  background: #DD51EE;
   padding: 0.2rem;
 }
 nav .details {
@@ -60,7 +60,7 @@ nav h1 {
 }
 .popup {
   width: 100%;
-  background: #3e2b7c;
+  background: #041454;
   height: 100%;
   position: fixed;
   bottom: 0;
@@ -91,6 +91,7 @@ nav h1 {
 }
 .btns button i{
     pointer-events: none;
+    font-size: 2rem;
 }
 #close{
  cursor: pointer;
@@ -122,7 +123,7 @@ nav h1 {
   margin-top: 4rem;
 }
 form.todo-container {
-  background: #3e2b7c;
+  background: #334ba2;
   width: 95%;
   border-radius: 1rem;
   padding: 0.5rem;
@@ -141,13 +142,14 @@ form.todo-container {
   margin-left: 1rem;
 }
 #todoList li {
-  background: #3e2b7c;
+  background:#5966BF ;
   margin: 0 0 1rem 0;
-  padding: 1rem;
+  padding: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 0.7rem;
+  border-radius: 1rem;
+  
   /* border: .2rem solid rgba(5,203,134,0.9); */
   /* border: .2rem solid rgba(209,26,41,0.9); */
 }
@@ -159,7 +161,7 @@ form.todo-container {
   cursor: pointer;
 }
 #todoList li span {
-  font-size: 1.3rem;
+  font-size: 1.7rem;
 }
 #historyList{
     padding: 1rem;
@@ -167,20 +169,39 @@ form.todo-container {
 }
 #historyList li{
 padding: 1rem 1rem 1rem 2rem;
-background-color: #22185d;
-margin: 1rem 0;
+background-color: #5966BF;
+margin-top: 3rem;
 border-radius: 1rem;
 display: flex;
 justify-content: space-between;
 align-items: center;
 font-size: 1.4rem;
+position: relative;
 }
+#historyList li p{
+  position: absolute;
+  background: rgba(5,203,134,0.9);
+  padding: 0.5rem 1rem;
+  border-radius: 3rem;
+  top: -1.5rem;
+  left: 1rem;
+  height: 3rem;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: .3rem solid #041454;
+}
+
 #historyList li button{
     font-size: 1.8rem;
     background: transparent;
     padding: 1rem;
     border: none;
     cursor: pointer;
+}
+#historyList li span{
+  margin-top: 1rem;
 }
 form.todo-container input {
   padding: 1rem;
@@ -190,19 +211,23 @@ form.todo-container input {
   border: none;
   outline: none;
 }
+form.todo-container input::placeholder{
+  color: #ffffffaf;
+}
 form.todo-container button {
   padding: 1rem;
   height: 5rem;
   width: 5rem;
-  background-color: #81d5e2;
+  background-color: #DD51EE;
   border: none;
   border-radius: 0.8rem;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+ 
 }
 form.todo-container button i {
-  color: #22185d;
+  color: #ffffff;
   font-size: 2rem;
 }

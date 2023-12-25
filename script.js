@@ -55,17 +55,18 @@ function deleteTodo(button) {
   todoList.removeChild(li);
 
   // Move todo to history
-  const historyLi = document.createElement("li");
-  historyLi.innerHTML = li.innerHTML;
-  historyLi.style.border = ".2rem solid rgba(209,26,41,0.9)";
-  historyList.appendChild(historyLi);
+  // const historyLi = document.createElement("li");
+  // historyLi.innerHTML = li.innerHTML;
+  // historyLi.style.border = ".2rem solid rgba(209,26,41,0.9)";
+  // historyList.appendChild(historyLi);
   // Save todo and history to local storage
   saveTodos();
-  saveHistory();
+  // saveHistory();
   // loadHistory()
 }
 
 function completeTodo(button) {
+  location.reload()
   const todoList = document.getElementById("todoList");
   const historyList = document.getElementById("historyList");
   const li = button.parentElement.parentElement;
@@ -134,6 +135,7 @@ function loadHistory() {
     const li = document.createElement("li");
     li.style.border = todo.style;
     li.innerHTML = `
+            <p>Completed</p>
             <span>${todo.text}</span>
             <button onclick="deleteHistory(this)"><i class="fa-solid fa-trash"></i></button>
         `;
