@@ -18,7 +18,7 @@ html {
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   height: 100vh;
-  background: #041455;
+  background: #b5e3f0;
   padding: 1rem;
 }
 nav {
@@ -32,7 +32,7 @@ nav img {
   height: 6rem;
   width: 6rem;
   border-radius: 50%;
-  background: #DD51EE;
+  background: #dd51ee;
   padding: 0.2rem;
 }
 nav .details {
@@ -45,10 +45,17 @@ nav .details .det {
 }
 nav .details .det h2 {
   font-size: 1.8rem;
+  color: #101010;
+}
+nav .details .det p {
+  color: #445;
 }
 nav h1 {
   font-size: 3.5rem;
   cursor: pointer;
+}
+nav h1 i {
+  color: #101010;
 }
 #current {
   font-size: 2rem;
@@ -57,10 +64,11 @@ nav h1 {
   width: 100%;
   border-top: 0.1rem solid #445;
   padding: 2rem 1rem 1rem 1rem;
+  color: #445;
 }
 .popup {
   width: 100%;
-  background: #041454;
+  background: #b5e3f0;
   height: 100%;
   position: fixed;
   bottom: 0;
@@ -76,8 +84,7 @@ nav h1 {
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem 1rem 0;
- border-bottom: .1rem solid #fff;
-
+  border-bottom: 0.1rem solid #445;
 }
 .topDiv span {
   font-size: 3rem;
@@ -87,33 +94,37 @@ nav h1 {
   font-weight: 400;
   width: 100%;
   margin: 1rem;
+  color: #445;
   /* background-color: red; */
 }
-.btns button i{
-    pointer-events: none;
-    font-size: 2rem;
+.btns button i {
+  pointer-events: none;
+  font-size: 2rem;
 }
-#close{
- cursor: pointer;
+#close {
+  cursor: pointer;
 }
-.noTask h1{
-    font-size: 10rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10rem;
-    opacity: .5;
+#close i {
+  color: #101010;
 }
-.noTask p{
-    width: 100%;
-    text-align: center;
-    font-size: 1.4rem;
-    margin-top: 2rem;
+.noTask h1 {
+  font-size: 10rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+  opacity: 0.5;
+}
+.noTask p {
+  width: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+  margin-top: 2rem;
 }
 #current i,
 .popup h2 i {
-  color: #c44cdb;
+  color: #101010;
 }
 .container {
   display: flex;
@@ -123,12 +134,13 @@ nav h1 {
   margin-top: 4rem;
 }
 form.todo-container {
-  background: #334ba2;
+  background: #ffd1d478;
   width: 95%;
   border-radius: 1rem;
   padding: 0.5rem;
   display: flex;
   justify-content: space-between;
+  border: 0.1rem solid #445;
 }
 #todoList {
   /* background-color: red; */
@@ -142,14 +154,14 @@ form.todo-container {
   margin-left: 1rem;
 }
 #todoList li {
-  background:#5966BF ;
+  background: #5966bf;
   margin: 0 0 1rem 0;
   padding: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 1rem;
-  
+
   /* border: .2rem solid rgba(5,203,134,0.9); */
   /* border: .2rem solid rgba(209,26,41,0.9); */
 }
@@ -163,45 +175,49 @@ form.todo-container {
 #todoList li span {
   font-size: 1.7rem;
 }
-#historyList{
-    padding: 1rem;
-    list-style: none;
+#historyList {
+  padding: 1rem;
+  list-style: none;
 }
-#historyList li{
-padding: 1rem 1rem 1rem 2rem;
-background-color: #5966BF;
-margin-top: 3rem;
-border-radius: 1rem;
-display: flex;
-justify-content: space-between;
-align-items: center;
-font-size: 1.4rem;
-position: relative;
+#historyList li {
+  padding: 1rem 1rem 1rem 2rem;
+  background: #ffd1d478;
+  margin-top: 3rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  position: relative;
 }
-#historyList li p{
+#historyList li p {
   position: absolute;
-  background: rgba(5,203,134,0.9);
+  background: rgba(5, 203, 134, 0.9);
   padding: 0.5rem 1rem;
   border-radius: 3rem;
   top: -1.5rem;
   left: 1rem;
   height: 3rem;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: .3rem solid #041454;
+  border: 0.3rem solid #b5e3f0;
 }
 
-#historyList li button{
-    font-size: 1.8rem;
-    background: transparent;
-    padding: 1rem;
-    border: none;
-    cursor: pointer;
+#historyList li button {
+  font-size: 1.8rem;
+  background: transparent;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
 }
-#historyList li span{
-  margin-top: 1rem;
+#historyList li span {
+  margin-top: 0.6rem;
+  color: #445;
+}
+#historyList li button i {
+  color: #445;
 }
 form.todo-container input {
   padding: 1rem;
@@ -210,22 +226,23 @@ form.todo-container input {
   background-color: transparent;
   border: none;
   outline: none;
+  color: #101010;
 }
-form.todo-container input::placeholder{
-  color: #ffffffaf;
+
+form.todo-container input::placeholder {
+  color: #445;
 }
 form.todo-container button {
   padding: 1rem;
   height: 5rem;
   width: 5rem;
-  background-color: #DD51EE;
+  background-color: #101010ba;
   border: none;
   border-radius: 0.8rem;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
- 
 }
 form.todo-container button i {
   color: #ffffff;

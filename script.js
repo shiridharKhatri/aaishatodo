@@ -50,7 +50,7 @@ function addTodo() {
 
 function deleteTodo(button) {
   const todoList = document.getElementById("todoList");
-  const historyList = document.getElementById("historyList");
+  // const historyList = document.getElementById("historyList");
   const li = button.parentElement.parentElement;
   todoList.removeChild(li);
 
